@@ -43,13 +43,6 @@ class GraphicsSettingsSubState extends BaseOptionsMenu
 			'bool', //Variable type
 			false); //Default value
 		addOption(option);
-		
-		var option:Option = new Option('Optimization',
-			'If checked, objects will disappear in some songs, increasing performance.',
-			'Optimization',
-			'bool',
-			false);
-		addOption(option);
 
 		var option:Option = new Option('Anti-Aliasing',
 			'If unchecked, disables anti-aliasing, increases performance\nat the cost of sharper visuals.',
@@ -68,8 +61,8 @@ class GraphicsSettingsSubState extends BaseOptionsMenu
 			60);
 		addOption(option);
 
-		option.minValue = 1;
-		option.maxValue = 100000;
+		option.minValue = 60;
+		option.maxValue = 240;
 		option.displayFormat = '%v FPS';
 		option.onChange = onChangeFramerate;
 		#end
