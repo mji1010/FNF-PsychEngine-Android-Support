@@ -2087,7 +2087,7 @@ function dodgeWarn(warnCanAppear:Bool = false){
 
 				var swagNote:Note;
 					if (gottaHitNote){
-						swagNote = new Note(daStrumTime, daNoteData, oldNote, false, false, true);
+						swagNote = new Note(daStrumTime, daNoteData, oldNote);
 					}
 					else {
 						swagNote = new Note(daStrumTime, daNoteData, oldNote);
@@ -2114,7 +2114,7 @@ function dodgeWarn(warnCanAppear:Bool = false){
 						var sustainNote:Note;
 						//checks if its a player note, if it is, then it turns it into a note that DOESNT use the custom style
 						if (gottaHitNote){
-							sustainNote = new Note(daStrumTime + (Conductor.stepCrochet * susNote) + (Conductor.stepCrochet / FlxMath.roundDecimal(SONG.speed, 2)), daNoteData, oldNote, true, false, true);
+							sustainNote = new Note(daStrumTime + (Conductor.stepCrochet * susNote) + (Conductor.stepCrochet / FlxMath.roundDecimal(SONG.speed, 2)), daNoteData, oldNote, true);
 						}
 						else {
 							sustainNote = new Note(daStrumTime + (Conductor.stepCrochet * susNote) + (Conductor.stepCrochet / FlxMath.roundDecimal(SONG.speed, 2)), daNoteData, oldNote, true);
